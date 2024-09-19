@@ -59,7 +59,7 @@ ConnectDB();
 const app = express();
 const PORT = process.env.MY_PORT || 8000;
 
-console.log("port clg", process.env.MY_PORT);
+// console.log("port clg", process.env.MY_PORT);
 
 // ============  Middle Wares ==============
 app.use(express.json());

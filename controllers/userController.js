@@ -25,11 +25,11 @@ import Cryptr from "cryptr";
 const cryptr = new Cryptr(process.env.CRYPTR_KEY);
 // let cyptrsecrect = process.env.CRYPTR_KEY;
 
-console.log("Cryptr secrect key", process.env.CRYPTR_KEY);
-console.log(" jwt  key", process.env.JWT_SECRET);
-console.log("EMAIL_HOST", process.env.EMAIL_HOST);
-console.log("EMAIL_USER", process.env.EMAIL_USER);
-console.log("EMAIL_PASS", process.env.EMAIL_PASS);
+// console.log("Cryptr secrect key", process.env.CRYPTR_KEY);
+// console.log(" jwt  key", process.env.JWT_SECRET);
+// console.log("EMAIL_HOST", process.env.EMAIL_HOST);
+// console.log("EMAIL_USER", process.env.EMAIL_USER);
+// console.log("EMAIL_PASS", process.env.EMAIL_PASS);
 
 // const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
@@ -37,7 +37,7 @@ console.log("EMAIL_PASS", process.env.EMAIL_PASS);
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, phone, user_type, password } = req.body;
 
-  console.log("user data in usercontroller ", req.body);
+  // console.log("user data in usercontroller ", req.body);
 
   //   Validation
   if (!name || !email || !phone || !user_type || !password) {

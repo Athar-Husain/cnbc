@@ -96,7 +96,7 @@ const protect = asyncHandler(async (req, res, next) => {
     next();
   } catch (error) {
     res.status(401).json({ message: error.message });
-    console.log(error.message);
+    // console.log(error.message);
   }
 });
 
