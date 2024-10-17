@@ -50,6 +50,7 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import errorHandler from "./middlewares/errorMiddleware.js"; // Ensure you include .js
 import userRoute from "./routes/userRoute.js"; // Ensure you include .js
+import chatBotRoute from "./routes/chatBotRoute.js";
 
 // Configure dotenv
 // dotenv.config();
@@ -72,14 +73,15 @@ app.use(
   cors({
     origin: [
       process.env.FRONTEND_URL,
-      "http://localhost:3000",
-      "http://localhost:3001",
+      // "http://localhost:3000",
+      // "http://localhost:3001",
     ],
     credentials: true,
   })
 );
 
 app.use("/api/users", userRoute);
+app.use("/api/chat", chatBotRoute);
 
 app.get("/", (req, res) => {
   res.send("<h1>This is from Server/index.js</h1>");
